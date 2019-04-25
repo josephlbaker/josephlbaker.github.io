@@ -1,0 +1,112 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bio {
+  font-size: 2em;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 600px;
+}
+
+.languages, .contact {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tiles {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.about-text, .about {
+  width: 600px;
+  font-size: 1.5em;
+  text-align: center;
+  display: inline-block;
+}
+
+.about {
+  font-weight: bold;
+}
+
+.profile-image {
+  height: 50vh;
+  border-radius: 50%;
+  float: right;
+}
+
+.header, .about-section, .skills, .projects {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.header {
+  margin-top: 120px;
+  margin-bottom: 180px;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+}
+
+.parent > div {
+  flex: 1;
+}
+
+.about-container {
+  text-align: center;
+}
+
+.project {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.floated-right {
+  float: right;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project-desc {
+  margin-top: 20px;
+}
+
+.social {
+  color: #4a4a4a;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-text, .about {
+    width: 100%;
+  }
+  .bio {
+    font-size: 1em;
+  }
+  .profile-image {
+  width: 100%;
+  height: auto;
+  }
+  .header {
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+  .about-text {
+    font-size: 1em;
+  }
+  .tiles {
+    font-size: 1em;
+    margin: 0;
+  }
+}
