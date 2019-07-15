@@ -34,7 +34,9 @@ body {
 }
 
 .profile-image {
-  height: 50vh;
+  max-width: 50vh;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
   float: right;
 }
@@ -42,6 +44,14 @@ body {
 .header, .about-section, .skills, .projects {
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+.about-section {
+  background-color: #f2f2f2;
+}
+
+.skills {
+  background-color: #f2f2f2;
 }
 
 .header {
@@ -83,9 +93,93 @@ body {
   color: #4a4a4a;
 }
 
+.subtitle {
+  text-align: center;
+}
+
 .social-links {
   display: flex;
   justify-content: space-around;
+}
+
+/* Hover effects */
+
+.project-container {
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+/* #piktogram {
+  float: left;
+  display: block;
+} */
+
+.column:last-child {
+	padding-bottom: 60px;
+}
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.column div {
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 200px;
+	/* margin: 0 0 0 25px; */
+	padding: 0;
+}
+
+.column div:first-child {
+	/* margin-left: 0; */
+}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
+figure {
+	width: 300px;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+figure:hover+span {
+  /* bottom: -36px; */
+  bottom: -48px;
+	opacity: 1;
+}
+
+.hover10 figure img {
+	-webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover10 figure:hover img {
+	-webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
 }
 
 @media only screen and (max-width: 600px) {
@@ -94,10 +188,6 @@ body {
   }
   .bio {
     font-size: 1em;
-  }
-  .profile-image {
-  width: 100%;
-  height: auto;
   }
   .header {
     margin-top: 120px;
